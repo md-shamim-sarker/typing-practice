@@ -5,7 +5,7 @@ body {
 .banner-img {
     width: 100vw;
     height: 85vh;
-    background: url('blog-banner.png');
+    background: url('../image/blog-banner.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
