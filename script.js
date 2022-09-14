@@ -1,6 +1,6 @@
 const display = document.getElementById("display");
 const question = document.getElementById("question");
-const startBtn = document.getElementById("start");
+const startBtn = document.getElementById("starts"); // issue-1: start => starts
 const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
@@ -24,7 +24,7 @@ const typeController = (e) => {
   const newLetter = e.key;
 
   // Handle backspace press
-  if (newLetter == "Backspace") {
+  if(newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
@@ -34,7 +34,7 @@ const typeController = (e) => {
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890!@#$%^&*()_+-={}[]'\".,?";
 
   // if it is not a valid character like Control/Alt then skip displaying anything
-  if (!validLetters.includes(newLetter)) {
+  if(!validLetters.includes(newLetter)) {
     return;
   }
 
@@ -42,20 +42,20 @@ const typeController = (e) => {
 
   const newLetterCorrect = validate(newLetter);
 
-  if (newLetterCorrect) {
+  if(newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
   }
 
   // check if given question text is equal to user typed text
-  if (questionText === userText) {
+  if(questionText === userText) {
     gameOver();
   }
 };
 
 const validate = (key) => {
-  if (key === questionText[userText.length - 1]) {
+  if(key === questionText[userText.length - 1]) {
     return true;
   }
   return false;
@@ -101,7 +101,7 @@ const closeModal = () => {
 
 const start = () => {
   // If already started, do not start again
-  if (startTime) return;
+  if(startTime) return;
 
   let count = 3;
   countdownOverlay.style.display = "flex";
@@ -110,7 +110,7 @@ const start = () => {
     countdownOverlay.innerHTML = '<h1>${count}</h1>';
 
     // finished timer
-    if (count == 0) {
+    if(count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "flex";
