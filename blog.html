@@ -18,24 +18,28 @@
     <header>
         <!-- banner Start -->
         <section class="banner-img d-flex justify-content-center align-items-center">
-            <h2 class="text-center">Questions & Answers</h2>
         </section>
         <!-- banner End -->
 
         <!-- accordion start -->
+        <h2 class="text-center">Questions & Answers</h2>
         <section class="container mt-5">
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            <span class="fs-2">01. What are the difference between local storage and session
+                            <span class="fs-2">01. What is the difference between local storage and session
                                 storage?</span>
                         </button>
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                         data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Answer...
+                        <div class="accordion-body">The difference between localStorage and sessionStorage has to do
+                            with lifetime and scope: how long the data is saved for
+                            and who the data is accessible to. Session storage is destroyed once the user closes the
+                            browser whereas, Local storage
+                            stores data with no expiration date.
                         </div>
                     </div>
                 </div>
@@ -43,13 +47,18 @@
                     <h2 class="accordion-header" id="flush-headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            <span class="fs-2">02. What are the difference between global scope and block scope?</span>
+                            <span class="fs-2">02. What is the difference between global scope and block scope?</span>
                         </button>
                     </h2>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            Answer...
+                            The global scope is the scope that contains, and is visible in, all other scopes. In
+                            client-side JavaScript, the global
+                            scope is generally the web page inside which all the code is being executed. On the other
+                            hand, a variable when declared inside the if or switch conditions or inside for or while
+                            loops, are accessible within that
+                            particular condition or loop is block scope.
                         </div>
                     </div>
                 </div>
@@ -64,7 +73,11 @@
                     <div id="flush-collapseThree" class="accordion-collapse collapse"
                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            Answer...
+                            The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the
+                            Call Stack is empty, the
+                            Event Loop will take the first event from the queue and will push it to the Call Stack,
+                            which effectively runs it. Such
+                            an iteration is called a tick in the Event Loop.
                         </div>
                     </div>
                 </div>

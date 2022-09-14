@@ -4,15 +4,15 @@ body {
 
 .banner-img {
     width: 100vw;
-    height: 80vh;
-    background: url('blog-banner.jpg');
+    height: 85vh;
+    background: url('blog-banner.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.banner-img h2 {
+h2 {
     font-size: 5em;
-    color: white;
+    color: #221c1c;
 }
 
 /* Mobile device: breakpoint: sm */
@@ -21,7 +21,8 @@ body {
         height: 20vh;
     }
 
-    .banner-img h2 {
+    h2 {
+        margin-top: 30px;
         font-size: 2em;
     }
 }
