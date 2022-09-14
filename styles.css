@@ -151,17 +151,19 @@ button {
 #histories {
   display: flex;
   flex-wrap: wrap;
+  gap: 5px;
   justify-content: space-around;
 }
 
 .card {
-  width: 100%;
+  width: 30%;
   height: 100%;
-  padding: 50px;
+  padding: 10px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px 30px;
+  text-align: center;
   color: white;
   border-radius: 15px;
   background: rgb(255, 255, 255);
@@ -184,13 +186,26 @@ button {
   top: 0;
 }
 
-@media only screen and (max-width: 700px) {
+/* Tablet device: breakpoint: md */
+@media only screen and (max-width: 992px) {
   .box-container {
     padding: 0 20px;
     width: 100%;
   }
 
   .card {
-    flex-direction: column;
+    width: 48%;
+  }
+}
+
+/* Mobile device: breakpoint: sm */
+@media only screen and (max-width: 768px) {
+  .box-container {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
   }
 }
