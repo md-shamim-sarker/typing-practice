@@ -99,6 +99,7 @@ const gameOver = () => {
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
   resultModal.classList.toggle("hidden");
+  location.reload();
 };
 
 const start = () => {
@@ -112,7 +113,7 @@ const start = () => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`; // issue-2: '...' => `...`
 
     // finished timer
-    if(count === 0) {
+    if(count < 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none"; // issue-3: flex => none
@@ -138,3 +139,11 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);
+
+// Prevent space button scrolling
+document.onkeyup = (event) => {
+  if(event.key == ' ') {
+    event.preventDefault();
+    return false;
+  }
+};
