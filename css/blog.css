@@ -8,6 +8,7 @@ body {
     background: url('../image/blog-banner.png');
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 2rem;
 }
 
 h2 {
